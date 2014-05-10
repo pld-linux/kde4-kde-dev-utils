@@ -1,7 +1,3 @@
-#
-# TODO:
-# - add man files
-#
 %define		orgname		kde-dev-utils
 %define		_state		stable
 %define		qtver		4.8.1
@@ -9,12 +5,12 @@
 Summary:	An set of utils useful for building and maintaining KDE
 Summary(pl.UTF-8):	Zestaw programów do kompilowania i utrzymywania KDE
 Name:		kde4-%{orgname}
-Version:	4.12.4
+Version:	4.13.0
 Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	499b4a4994406f9d536f52d9289fa06c
+# Source0-md5:	afdda71423b9dbf4e6212cbc93486aa8
 URL:		http://www.kde.org/
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	QtScriptTools-devel >= %{qtver}
@@ -79,14 +75,22 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libktrace.so.4.*
+%ghost %{_libdir}/libktrace.so.4
+%attr(755,root,root) %{_bindir}/demangle
+%attr(755,root,root) %{_bindir}/kminspector
+%attr(755,root,root) %{_bindir}/kmmatch
+%attr(755,root,root) %{_bindir}/kmtrace
 %attr(755,root,root) %{_bindir}/kpartloader
 %attr(755,root,root) %{_bindir}/kstartperf
 %attr(755,root,root) %{_bindir}/kuiviewer
 %attr(755,root,root) %{_libdir}/kde4/kstartperf.so
 %attr(755,root,root) %{_libdir}/kde4/kuiviewerpart.so
 %attr(755,root,root) %{_libdir}/kde4/quithumbnail.so
+%{_mandir}/man1/demangle.1*
 %{_includedir}/kprofilemethod.h
 %{_desktopdir}/kde4/kuiviewer.desktop
+%{_datadir}/apps/kmtrace
 %{_datadir}/apps/kpartloader
 %{_datadir}/apps/kuiviewer
 %{_datadir}/apps/kuiviewerpart
