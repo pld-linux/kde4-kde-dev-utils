@@ -5,12 +5,12 @@
 Summary:	An set of utils useful for building and maintaining KDE
 Summary(pl.UTF-8):	Zestaw programów do kompilowania i utrzymywania KDE
 Name:		kde4-%{orgname}
-Version:	4.14.0
+Version:	4.14.3
 Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	48df5bf2fb5ba58c7b2e61e712e15c6a
+# Source0-md5:	b43b6e422ba8b71ad382604a2982fa95
 URL:		http://www.kde.org/
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	QtScriptTools-devel >= %{qtver}
